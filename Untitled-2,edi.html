@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Juego del Ahorcado</h1>
+        
+        <!-- Área para mostrar los intentos restantes -->
+        <div class="game-info">
+            <p>Intentos restantes: <span id="attempts">6</span></p>
+            <p>Letras usadas: <span id="used-letters"></span></p>
+        </div>
+        
+        <!-- Área para mostrar la palabra con guiones -->
+        <div class="word-display">
+            <p id="word-container">_ _ _ _ _</p>
+        </div>
+        
+        <!-- Área para los botones del alfabeto -->
+        <div class="alphabet-container" id="alphabet">
+            <!-- Los botones se generarán dinámicamente con JavaScript -->
+        </div>
+        
+        <!-- Área para mensajes del juego -->
+        <div class="message-area">
+            <p id="game-message">¡Adivina la palabra!</p>
+        </div>
+        
+        <!-- Botón para reiniciar el juego -->
+        <div class="controls">
+            <button id="restart-btn" onclick="restartGame()">🔄 Nuevo Juego</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

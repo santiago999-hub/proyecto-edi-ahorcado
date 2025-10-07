@@ -1,0 +1,208 @@
+ style.css.
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+h1 {
+    color: #4a5568;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Información del juego */
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.game-info p {
+    font-weight: bold;
+    color: #4a5568;
+}
+
+#attempts {
+    color: #e53e3e;
+    font-size: 1.2em;
+}
+
+#used-letters {
+    color: #667eea;
+    font-size: 1.1em;
+}
+
+/* Área de la palabra */
+.word-display {
+    margin: 30px 0;
+    padding: 20px;
+    background: #edf2f7;
+    border-radius: 15px;
+    border: 2px dashed #cbd5e0;
+}
+
+#word-container {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 10px;
+    color: #2d3748;
+    font-family: 'Courier New', monospace;
+}
+
+/* Contenedor del alfabeto */
+.alphabet-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+    margin: 30px 0;
+    padding: 20px;
+    background: #f7fafc;
+    border-radius: 15px;
+}
+
+/* Botones de letras */
+.letter-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.letter-btn:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.letter-btn:active {
+    transform: translateY(0);
+}
+
+.letter-btn:disabled {
+    background: #cbd5e0;
+    color: #a0aec0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Área de mensajes */
+.message-area {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-message {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #4a5568;
+}
+
+.win-message {
+    background: #c6f6d5;
+    color: #22543d;
+    border: 2px solid #68d391;
+}
+
+.lose-message {
+    background: #fed7d7;
+    color: #742a2a;
+    border: 2px solid #fc8181;
+}
+
+/* Controles */
+.controls {
+    margin-top: 30px;
+}
+
+#restart-btn {
+    background: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#restart-btn:hover {
+    background: #38a169;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#restart-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    #word-container {
+        font-size: 2em;
+        letter-spacing: 5px;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .alphabet-container {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+        gap: 8px;
+    }
+    
+    .letter-btn {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
